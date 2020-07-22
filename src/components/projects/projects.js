@@ -10,9 +10,8 @@ import AlgoProjectCard from './cards/algoCard';
 //CSS Styles
 const useStyles = makeStyles(theme => ({
     mainContainer: {
-        background: "#34495e",
         color: "#ecf0f1",
-        textAlign: "center",
+        // textAlign: "center",
         height: '130vh'
     },
     mainHeader: {
@@ -20,13 +19,15 @@ const useStyles = makeStyles(theme => ({
         paddingBottom: '1rem',
         color: "#1abc9c",
         fontSize: '2rem',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        textAlign: 'center'
     },
     subHeader: {
         fontSize: '2rem',
         fontWeight: 'light',
         color: "#2ecc71",
-        paddingBottom: '2rem',
+        paddingBottom: '1rem',
+        textAlign: 'center'
     },
     cardMargin: {
         margin: 'auto'

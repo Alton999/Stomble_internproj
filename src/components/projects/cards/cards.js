@@ -14,7 +14,7 @@ const useStyles = makeStyles({
         marginTop: '1rem'
     },
     headerStyles: {
-        fontSize: '1.3rem'
+        fontSize: '1rem'
     },
     paragraphStyles: {
         marginBottom: '1rem'
@@ -31,7 +31,7 @@ const ProjectCard = () => {
             </Typography>
             <CardMedia src="/imgs/fabio-oyXis2kALVg-unsplash" title="g20"/>
             <Divider className={classes.dividerStyle}/>
-            <Typography variant="h4" component="h2" className={classes.paragraphStyles}>
+            <Typography variant="h6" component="h2" className={classes.paragraphStyles}>
                 What was this project about?
             </Typography>
             <Typography className ={classes.paragraphStyles}>
@@ -39,7 +39,7 @@ const ProjectCard = () => {
                 analyse what was going on during the G20 world summit. It was easy and very possible to to get the general idea of the topics that were 
                 discussed by reading one or two news articles but how about thousands of articles? This is where it gets intersting...
             </Typography>
-            <Typography variant="h4" className = {classes.paragraphStyles}>
+            <Typography variant="h6" className = {classes.paragraphStyles}>
                 Steps we took:
             </Typography>
             <Typography variant="h6">

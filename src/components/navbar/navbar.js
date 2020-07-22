@@ -83,8 +83,9 @@ const Navbar = () => {
     return (
         <>
         {/* This component includes the navbar with styling and triggers the slider menu to come out */}
+        {/* Since there wasn't much styling under the navbar having the styles in here temporarily is fine */}
         <Box component="nav">
-            <AppBar position="static" style={{background: "#27ae60"}}>
+            <AppBar position="static" style={{background: "#2c3e50"}}>
                 <Toolbar>
                     <IconButton onClick={toggleSlider('right', true)}>
                         <ArrowBack style={{color: '#f1c40f'}}/>
