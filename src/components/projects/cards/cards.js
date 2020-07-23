@@ -5,31 +5,43 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import CardMedia from '@material-ui/core/CardMedia'
-import {Divider} from '@material-ui/core';
+import {Divider, Avatar, Container} from '@material-ui/core';
+import { deepOrange } from '@material-ui/core/colors';
 
-const useStyles = makeStyles({
+
+const useStyles = makeStyles(theme => ({
     dividerStyle: {
         marginBottom: '1rem',
         marginTop: '1rem'
     },
     headerStyles: {
-        fontSize: '1rem'
+        fontSize: '0.8rem'
     },
     paragraphStyles: {
         marginBottom: '1rem'
-    }
-  });
+    },
+    avatarStyles: {
+        // flex: '1',
+        marginLeft: 'auto',
+        color: theme.palette.getContrastText(deepOrange[500]),
+        backgroundColor: deepOrange[500]
+    },
+    inlineFlexContent: {
+        display: "flex"
+    },
+  }));
   
 const ProjectCard = () => {
     const classes = useStyles();
     return (
         <Card>
             <CardContent>
-            <Typography variant="h4">
-                G20 Text Analysis
-            </Typography>
-            <CardMedia src="/imgs/fabio-oyXis2kALVg-unsplash" title="g20"/>
+                <Container className={classes.inlineFlexContent}>
+                    <Typography variant="h4">
+                        G20 Text Analysis
+                    </Typography>
+                    <Avatar className={classes.avatarStyles}>D</Avatar>
+                </Container>
             <Divider className={classes.dividerStyle}/>
             <Typography variant="h6" component="h2" className={classes.paragraphStyles}>
                 What was this project about?

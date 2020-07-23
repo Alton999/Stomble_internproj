@@ -43,17 +43,19 @@ const Projects = () => {
             <Typography className={classes.mainHeader}>Past Projects</Typography>
             <Box component ="div">
             <Typography className={classes.subHeader}>Data Science Projects</Typography>
-                {/* Here will the the different project cards */}
-                
-                <Grid container spacing={3}>
+                {/* Here will the the different project cards */} 
+                <Grid container spacing={3} className = {classes.cardMargin}>
+                    {/* Empty grid container to add auto margins along the sides */}
+                    {/* We still need to turn each card into a changable component using inputs */}
                     <Grid item xs={false} sm={1}></Grid>
-                    <Grid item xs={12} sm={5}>
-                        <ProjectCard className={classes.cardMargin}/>
-                    </Grid>
-                    <Grid item xs={12} sm={5}>
-                        <AlgoProjectCard className={classes.cardMargin}/>
+                    <Grid item xs={11} sm={4}>
+                        <ProjectCard />
                     </Grid>
                     <Grid item xs={false} sm={1}></Grid>
+                    <Grid item xs={11} sm={4}>
+                        <AlgoProjectCard />
+                    </Grid>
+                    
                 </Grid>
             </Box>
         </Box>

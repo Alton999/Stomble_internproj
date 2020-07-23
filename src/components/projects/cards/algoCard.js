@@ -9,42 +9,55 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import CardMedia from '@material-ui/core/CardMedia'
-import {Divider} from '@material-ui/core';
+import {Divider, Avatar, Container} from '@material-ui/core';
+import { deepOrange } from '@material-ui/core/colors';
+
 
 //This is where we store our styles for each class method in the component
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme)=> ({
     dividerStyle: {
         marginBottom: '1rem',
         marginTop: '1rem'
     },
     headerStyles: {
-        fontSize: '1.3rem'
+        fontSize: '0.8rem'
     },
     paragraphStyles: {
         marginBottom: '1rem'
-    }
-  });
+    },
+    avatarStyles: {
+        // flex: '1',
+        marginLeft: 'auto',
+        color: theme.palette.getContrastText(deepOrange[500]),
+        backgroundColor: deepOrange[500]
+    },
+    inlineFlexContent: {
+        display: "flex"
+    },
+  }));
   
 const AlgoProjectCard = () => {
     const classes = useStyles();
     return (
         <Card>
             <CardContent>
-            <Typography variant="h4">
-                Algo Trading financials
-            </Typography>
+            <Container className={classes.inlineFlexContent}>
+                    <Typography variant="h4">
+                        Algo Trading
+                    </Typography>
+                    <Avatar className={classes.avatarStyles}>D</Avatar>
+                </Container>
             <CardMedia src="/imgs/fabio-oyXis2kALVg-unsplash" title="g20"/>
             <Divider className={classes.dividerStyle}/>
-            <Typography variant="h4" component="h2" className={classes.paragraphStyles}>
+            <Typography variant="h6" component="h2" className={classes.paragraphStyles}>
                 What was this project about?
             </Typography>
             <Typography className ={classes.paragraphStyles}>
                 Everyday the stock markets are going up and down and for a while it was a passion to understand how the market works. What better way to do that
-                then to code a program and that predict your gains and loses? Through this project I created buy and sell signals to indicate in which point in time
-                was the best point of purchase. This may not seem very interesting yet but once we trained machine learning models and predicted the next few years
+                then to code a program and that predict your gains and loses? This may not seem very interesting yet but once we trained machine learning models and predicted the next few years
                 using computing prowess... that's when it got really interesting!
             </Typography>
-            <Typography variant="h4" className = {classes.paragraphStyles}>
+            <Typography variant="h6" className = {classes.paragraphStyles}>
                 Steps we took:
             </Typography>
             <Typography variant="h6">
@@ -66,7 +79,7 @@ const AlgoProjectCard = () => {
                 6. Generate buy and sell signals based on the smoothing
                 <br/>
                 <br/>
-                6. Run the program through the machine learning algorithm to get the future predictions
+                7. Run the program through the machine learning algorithm to get the future predictions
                 
             </Typography>
             <Typography>
