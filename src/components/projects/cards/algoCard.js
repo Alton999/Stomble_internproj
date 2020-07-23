@@ -61,7 +61,7 @@ const AlgoProjectCard = () => {
                 Steps we took:
             </Typography>
             <Typography variant="h6">
-                1. Call the Oanda API and input the query string to gather the objects for a specific company and 
+                1. Call the Oanda API and input the query string 
                 <br/>
                 <br/>
                 2. Store and sort all the collected data to a Pandas framework.
