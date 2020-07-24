@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+//This was added to allow the buttons to route to different pages
 import {BrowserRouter as Router} from 'react-router-dom'
 // import './index.css';
 import App from "./App";

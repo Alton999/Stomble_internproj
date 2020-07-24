@@ -80,7 +80,8 @@ const AlgoProjectCard = () => {
                 <br/>
                 <br/>
                 7. Run the program through the machine learning algorithm to get the future predictions
-                
+                <br/>
+                <br/>
             </Typography>
             <Typography>
                 If you're interested to find out more about the success and flow of this project, hit me up at my contacts page!
