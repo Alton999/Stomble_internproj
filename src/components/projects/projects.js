@@ -5,7 +5,10 @@ import {makeStyles} from '@material-ui/core/styles';
 import {Typography, Box, Grid} from '@material-ui/core';
 import Navbar from '../navbar/navbar'; 
 import ProjectCard from './cards/cards';
-import AlgoProjectCard from './cards/algoCard';
+import DataAvatar from './cards/cardImages/data-science.svg';
+import G20IMG from './cards/cardImages/g20IMG.jpg';
+
+// import AlgoProjectCard from './cards/algoCard';
 
 //CSS Styles
 const useStyles = makeStyles(theme => ({
@@ -17,7 +20,7 @@ const useStyles = makeStyles(theme => ({
     mainHeader: {
         paddingTop: '2rem',
         paddingBottom: '1rem',
-        color: "#1abc9c",
+        color: "#ecf0f1",
         fontSize: '2rem',
         fontWeight: 'bold',
         textAlign: 'center'
@@ -25,12 +28,14 @@ const useStyles = makeStyles(theme => ({
     subHeader: {
         fontSize: '2rem',
         fontWeight: 'light',
-        color: "#2ecc71",
+        color: "#bdc3c7",
         paddingBottom: '1rem',
         textAlign: 'center'
     },
     cardMargin: {
-        margin: 'auto'
+        paddingLeft: '10%',
+        paddingRIght: '10%',
+        maxWidth: '95%'
     }
     
 }))
@@ -40,23 +45,24 @@ const Projects = () => {
         <> 
         <Navbar/>
         <Box component="header" className ={classes.mainContainer}>
-            <Typography className={classes.mainHeader}>Past Projects</Typography>
+            <Typography className={classes.mainHeader}>All Past Projects</Typography>
             <Box component ="div">
             <Typography className={classes.subHeader}>Data Science Projects</Typography>
                 {/* Here will the the different project cards */} 
-                <Grid container spacing={3} className = {classes.cardMargin}>
+                <Grid container spacing={2} className = {classes.cardMargin} justify="center">
                     {/* Empty grid container to add auto margins along the sides */}
                     {/* We still need to turn each card into a changable component using inputs */}
-                    <Grid item xs={false} sm={1}></Grid>
-                    <Grid item xs={11} sm={4}>
-                        <ProjectCard />
+                    <Grid item xs={12} lg={6}>
+                        <ProjectCard title={'G20 Text Analysis'} subtitle={'Data Science'} description={''} avatarSrc={DataAvatar} imgSrc={G20IMG}/>
                     </Grid>
-                    <Grid item xs={false} sm={1}></Grid>
-                    <Grid item xs={11} sm={4}>
-                        <AlgoProjectCard />
+                    <Grid item xs={12} lg={6}>
+                        <ProjectCard title={'G20 Text Analysis'} subtitle={'Data Science'} description={''} avatarSrc={DataAvatar} imgSrc={G20IMG}/>
                     </Grid>
-                    
+                    <Grid item xs={12} lg={6}>
+                        <ProjectCard title={'G20 Text Analysis'} subtitle={'Data Science'} description={''} avatarSrc={DataAvatar} imgSrc={G20IMG}/>
+                    </Grid>
                 </Grid>
+
             </Box>
         </Box>
         

@@ -14,11 +14,11 @@ const useStyles = makeStyles(theme => ({
     },
     title: {
         color: "#bdc3c7",
-        fontSize: '3rem'
+        fontSize: '2.5rem'
     },
     subtitle: {
         color: '#ecf0f1',
-        fontSize: '2.5rem',
+        fontSize: '2rem',
         marginBottom: '3rem'
     },
     typedContainer: {
@@ -28,7 +28,7 @@ const useStyles = makeStyles(theme => ({
         left: "50%",
         transform: "translate(-50%,-50%)",
         zIndex: 1,
-        width: "100vw",
+        // width: "100vw",
         textAlign: "center",
 
     }
