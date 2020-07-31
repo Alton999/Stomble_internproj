@@ -2,7 +2,7 @@
 //Import the required components
 import React from 'react';
 import {makeStyles} from '@material-ui/core/styles';
-import {Typography, Box, Grid} from '@material-ui/core';
+import {Typography, Box, Grid, Paper} from '@material-ui/core';
 import Navbar from '../navbar/navbar'; 
 import ProjectCard from './cards/cards';
 import DataAvatar from './cards/cardImages/data-science.svg';
@@ -39,6 +39,15 @@ const useStyles = makeStyles(theme => ({
     }
     
 }))
+
+const cardInfo = [
+    {
+        projectName: 'G20 Text Analysis',
+        projectClass: 'D',
+        projectDescription: "There were many ways of understanding news articles, one could be simply reading newspapers, blogging about it online or even talking about it with your peers. What we wanted to do was the analyse thousands of different articles from different sources and this was when programming really came in handy.",
+        imageUrl: '/cardImages/scott-graham-5fNmWej4tAA-unsplash'
+    }
+]
 const Projects = () => {
     const classes = useStyles();
     return (   
@@ -46,24 +55,24 @@ const Projects = () => {
         <Navbar/>
         <Box component="header" className ={classes.mainContainer}>
             <Typography className={classes.mainHeader}>All Past Projects</Typography>
-            <Box component ="div">
-            <Typography className={classes.subHeader}>Data Science Projects</Typography>
-                {/* Here will the the different project cards */} 
-                <Grid container spacing={2} className = {classes.cardMargin} justify="center">
-                    {/* Empty grid container to add auto margins along the sides */}
-                    {/* We still need to turn each card into a changable component using inputs */}
-                    <Grid item xs={12} lg={6}>
-                        <ProjectCard title={'G20 Text Analysis'} subtitle={'Data Science'} description={''} avatarSrc={DataAvatar} imgSrc={G20IMG}/>
-                    </Grid>
-                    <Grid item xs={12} lg={6}>
-                        <ProjectCard title={'G20 Text Analysis'} subtitle={'Data Science'} description={''} avatarSrc={DataAvatar} imgSrc={G20IMG}/>
-                    </Grid>
-                    <Grid item xs={12} lg={6}>
-                        <ProjectCard title={'G20 Text Analysis'} subtitle={'Data Science'} description={''} avatarSrc={DataAvatar} imgSrc={G20IMG}/>
-                    </Grid>
-                </Grid>
 
+            <Box component ="div">
+            {/* <Typography className={classes.subHeader}>Data Science Projects</Typography> */}
+                {/* Here will the the different project cards */} 
+                    <Grid container spacing={3} className = {classes.cardMargin} justify="center">
+                        {/* Empty grid container to add auto margins along the sides */}
+                        {/* We still need to turn each card into a changable component using inputs */}
+                        <Grid item xs={12} lg={4}>
+                            <Paper elevation={3}>
+                                <ProjectCard title={'G20 Text Analysis'} subtitle={'Data Science'} description={''} avatarSrc={DataAvatar} imgSrc={G20IMG}/>
+                            </Paper>
+                        </Grid>
+                        <Grid item xs={12} lg={4}>
+                            <ProjectCard title={'G20 Text Analysis'} subtitle={'Data Science'} description={''} avatarSrc={DataAvatar} imgSrc={G20IMG}/>
+                        </Grid>
+                    </Grid>
             </Box>
+
         </Box>
         
         </>

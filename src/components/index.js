@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from './navbar/navbar';
-import About from './content/About';
+import Home from './content/Home';
 import Particles from 'react-particles-js';
 import {makeStyles} from '@material-ui/core/styles';
 // import Projects from './projects/projects';
@@ -13,12 +13,12 @@ const useStyles = makeStyles({
   })
 
   
-const Home = () => {
+const Main = () => {
     const classes = useStyles();
     return (
        <div>
             <Navbar/>
-            <About/>
+            <Home/>
             {/* Include the required parameters for the particle background */}
             <Particles
             canvasClassName={classes.particlesCanva}
@@ -79,4 +79,4 @@ const Home = () => {
     )
 }
 
-export default Home;
+export default Main;

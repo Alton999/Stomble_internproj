@@ -16,7 +16,7 @@ import IconButton from '@material-ui/core/IconButton';
 
 const useStyles = makeStyles(theme => ({
     root: {
-        maxWidth: '700px'
+        minWidth: '200px',
     },
       bullet: {
         display: 'inline-block',
@@ -34,40 +34,32 @@ const useStyles = makeStyles(theme => ({
       },
       headerTitle: {
           fontSize: '1em'
+      },
+      alignCenter: {
+          alignItems: 'center'
       }
+      
   }));
   
-const cardInfo = [
-    {
-        projectName: 'G20 Text Analysis',
-        projectClass: 'D',
-        projectDescription: "There were many ways of understanding news articles, one could be simply reading newspapers, blogging about it online or even talking about it with your peers. What we wanted to do was the analyse thousands of different articles from different sources and this was when programming really came in handy.",
-        imageUrl: '/cardImages/scott-graham-5fNmWej4tAA-unsplash'
-    }
-]
+
 
 const ProjectCard = (props) => {
     const classes = useStyles();
     const { avatarSrc, title, subtitle, description, imgSrc } = props;
     return (
         <Card className={classes.root}>
+            <CardMedia image={imgSrc} className={classes.media}/>
             <CardHeader
                     avatar={<Avatar src={avatarSrc}/>}
-                    action={<IconButton aria-label="settings"><ShareIcon /></IconButton>}
+                    action={<IconButton aria-label="settings" className={classes.alignCenter}><ShareIcon /></IconButton>}
+                    titleTypographyProps={{variant: 'h6'}}
                     title= {title}
+                    subheaderTypographyProps={{variant:'subtitle2'}}
                     subheader={subtitle}
                 />
-            <CardMedia image={imgSrc} className={classes.media}/>
-            <CardContent>
-                <Typography className={classes.pos} color="textSecondary">
-                adjective
-                </Typography>
-                <Typography variant="body2" component="p">
-                well meaning and kindly.
-                <br />
-                {'"a benevolent smile"'}
-                </Typography>
-            </CardContent>
+            {/* <CardContent>
+                
+            </CardContent> */}
             <CardActions>
                 <Button size="small">Learn More</Button>
             </CardActions>

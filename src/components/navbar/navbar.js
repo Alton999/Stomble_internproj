@@ -37,7 +37,7 @@ const menuItems = [
     {
         listIcon: <AssignmentInd/>,
         listText: "About us",
-        listPath: "/projects"
+        listPath: "/about"
 
     },
     {
@@ -91,7 +91,7 @@ const Navbar = () => {
                         <ArrowBack style={{color: '#f1c40f'}}/>
                     </IconButton>
                     <Typography variant="h5" style={{color: '#ecf0f1'}}>
-                        About me
+                        See more
                     </Typography>
                     <MobileRightMenuSlider
                     anchor="right"

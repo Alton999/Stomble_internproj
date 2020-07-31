@@ -34,7 +34,7 @@ const useStyles = makeStyles(theme => ({
     }
 }))
 
-const About = () => {
+const Home = () => {
     const classes = useStyles()
     return (
         <Box className={classes.typedContainer}>
@@ -57,4 +57,4 @@ const About = () => {
     )
 }
 
-export default About;
+export default Home;
