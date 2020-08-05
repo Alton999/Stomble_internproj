@@ -1,81 +1,155 @@
-
 //Import the required components
 import React from 'react';
 import {makeStyles} from '@material-ui/core/styles';
-import {Typography, Box, Grid, Paper} from '@material-ui/core';
+import {Typography, Box, Grid, Card, CardActionArea, CardActions, CardContent, CardMedia, Button} from '@material-ui/core';
 import Navbar from '../navbar/navbar'; 
-import ProjectCard from './cards/cards';
-import DataAvatar from './cards/cardImages/data-science.svg';
-import G20IMG from './cards/cardImages/g20IMG.jpg';
-
-// import AlgoProjectCard from './cards/algoCard';
+import G20IMG from '../images/g20IMG.jpg'
 
 //CSS Styles
 const useStyles = makeStyles(theme => ({
     mainContainer: {
-        color: "#ecf0f1",
-        // textAlign: "center",
-        height: '130vh'
+        background: '#223',
+        height: '100%',
+
     },
-    mainHeader: {
-        paddingTop: '2rem',
-        paddingBottom: '1rem',
-        color: "#ecf0f1",
-        fontSize: '2rem',
-        fontWeight: 'bold',
-        textAlign: 'center'
-    },
-    subHeader: {
-        fontSize: '2rem',
-        fontWeight: 'light',
-        color: "#bdc3c7",
-        paddingBottom: '1rem',
-        textAlign: 'center'
-    },
-    cardMargin: {
-        paddingLeft: '10%',
-        paddingRIght: '10%',
-        maxWidth: '95%'
+    cardContainer: {
+        maxWidth: 345,
+        margin: '5rem auto'
     }
     
 }))
 
-const cardInfo = [
-    {
-        projectName: 'G20 Text Analysis',
-        projectClass: 'D',
-        projectDescription: "There were many ways of understanding news articles, one could be simply reading newspapers, blogging about it online or even talking about it with your peers. What we wanted to do was the analyse thousands of different articles from different sources and this was when programming really came in handy.",
-        imageUrl: '/cardImages/scott-graham-5fNmWej4tAA-unsplash'
-    }
-]
+
 const Projects = () => {
     const classes = useStyles();
     return (   
-        <> 
-        <Navbar/>
-        <Box component="header" className ={classes.mainContainer}>
-            <Typography className={classes.mainHeader}>All Past Projects</Typography>
-
-            <Box component ="div">
-            {/* <Typography className={classes.subHeader}>Data Science Projects</Typography> */}
-                {/* Here will the the different project cards */} 
-                    <Grid container spacing={3} className = {classes.cardMargin} justify="center">
-                        {/* Empty grid container to add auto margins along the sides */}
-                        {/* We still need to turn each card into a changable component using inputs */}
-                        <Grid item xs={12} lg={4}>
-                            <Paper elevation={3}>
-                                <ProjectCard title={'G20 Text Analysis'} subtitle={'Data Science'} description={''} avatarSrc={DataAvatar} imgSrc={G20IMG}/>
-                            </Paper>
-                        </Grid>
-                        <Grid item xs={12} lg={4}>
-                            <ProjectCard title={'G20 Text Analysis'} subtitle={'Data Science'} description={''} avatarSrc={DataAvatar} imgSrc={G20IMG}/>
-                        </Grid>
-                    </Grid>
-            </Box>
-
+        <Box component='div' className={classes.mainContainer}>
+            <Navbar/>
+            
+            <Grid container justify='center'>
+                {/* Project 1 */}
+                <Grid item xs={12} sm={8} md={6}>
+                    <Card className={classes.cardContainer}>
+                        <CardActionArea>
+                            <CardMedia
+                                component="img"
+                                alt="project 1"
+                                height="140"
+                                image={G20IMG}
+                            /> 
+                            <CardContent>
+                                <Typography gutterBottom variant="h5">
+                                    Project 1
+                                </Typography>
+                                <Typography variant="body2" color="textSecondary" component='p'>
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+                                </Typography>
+                            </CardContent>
+                        </CardActionArea>
+                            <CardActions>
+                                <Button size='small' color='primary'>
+                                    Share
+                                </Button>
+                                <Button size='small' color='primary'>
+                                    Live Demo
+                                </Button>
+                            </CardActions>
+                    </Card>
+                </Grid>
+                {/* Project 2 */}
+                <Grid item xs={12} sm={8} md={6}>
+                    <Card className={classes.cardContainer}>
+                        <CardActionArea>
+                            <CardMedia
+                                component="img"
+                                alt="project 2"
+                                height="140"
+                                image={G20IMG}
+                            /> 
+                            <CardContent>
+                                <Typography gutterBottom variant="h5">
+                                    Project 2
+                                </Typography>
+                                <Typography variant="body2" color="textSecondary" component='p'>
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+                                </Typography>
+                            </CardContent>
+                        </CardActionArea>
+                            <CardActions>
+                                <Button size='small' color='primary'>
+                                    Share
+                                </Button>
+                                <Button size='small' color='primary'>
+                                    Live Demo
+                                </Button>
+                            </CardActions>
+                    </Card>
+                </Grid>
+                {/* Project 3 */}
+                <Grid item xs={12} sm={8} md={6}>
+                    <Card className={classes.cardContainer}>
+                        <CardActionArea>
+                            <CardMedia
+                                component="img"
+                                alt="project 3"
+                                height="140"
+                                image={G20IMG}
+                            /> 
+                            <CardContent>
+                                <Typography gutterBottom variant="h5">
+                                    Project 3
+                                </Typography>
+                                <Typography variant="body2" color="textSecondary" component='p'>
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+                                </Typography>
+                            </CardContent>
+                        </CardActionArea>
+                            <CardActions>
+                                <Button size='small' color='primary'>
+                                    Share
+                                </Button>
+                                <Button size='small' color='primary'>
+                                    Live Demo
+                                </Button>
+                            </CardActions>
+                    </Card>
+                </Grid>
+                {/* Project 4 */}
+                <Grid item xs={12} sm={8} md={6}>
+                    <Card className={classes.cardContainer}>
+                        <CardActionArea>
+                            <CardMedia
+                                component="img"
+                                alt="project 4"
+                                height="140"
+                                image={G20IMG}
+                            /> 
+                            <CardContent>
+                                <Typography gutterBottom variant="h5">
+                                    Project 4
+                                </Typography>
+                                <Typography variant="body2" color="textSecondary" component='p'>
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+                                </Typography>
+                            </CardContent>
+                        </CardActionArea>
+                            <CardActions>
+                                <Button size='small' color='primary'>
+                                    Share
+                                </Button>
+                                <Button size='small' color='primary'>
+                                    Live Demo
+                                </Button>
+                            </CardActions>
+                    </Card>
+                </Grid>
+            </Grid>
         </Box>
+
+
+
         
-        </>
+        
         );
   }
   

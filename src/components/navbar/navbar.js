@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
 import MobileRightMenuSlider from "@material-ui/core/Drawer";
 import { ArrowBack, AssignmentInd, Home, Apps, ContactMail} from '@material-ui/icons';
-
+import Footer from '../footer'
 
 // import classes from '*.module.css';
 // CSS STYLES
@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme)=> ({
     },
     listItem: {
         color: '#ecf0f1'
-    }
+    },
     
 }))
 
@@ -47,7 +47,8 @@ const menuItems = [
     },
     {
         listIcon: <ContactMail/>,
-        listText: "Contact us"
+        listText: "Contact us",
+        listPath: '/contact'
     }
 ]
 //Main Content for Navbar
@@ -97,8 +98,8 @@ const Navbar = () => {
                     anchor="right"
                     open={state.right}
                     onClose={toggleSlider('right', false)}
-                    >
-                        {sideList('right')}
+                    > {sideList('right')}
+                    <Footer/>
                     </MobileRightMenuSlider>
                 </Toolbar>
             </AppBar>
