@@ -121,7 +121,7 @@ const About = () => {
                     As an individual with a strong passion for technology I started to learn how to code back in 2018 and that was where this amazing journey all started. I am currently still a student at the University of Sydney studying Design Computing which consist of a good mix between program and well thought of designs.
                 </Typography>
                 <Box component="div" className={classes.timeline}>
-                    <Typography variant ="h2" className={`${classes.timelineYear} ${classes.timelineItem}`}>Jun 2018</Typography>
+                    <Typography variant ="h2" className={`${classes.timelineYear} ${classes.timelineItem}`}>JUN 2018</Typography>
                     <Box component="div" className={classes.timelineItem}>
                         <Typography variant="h5" className={classes.subHeading}>
                             Basics of programming
@@ -133,7 +133,7 @@ const About = () => {
                             This was where I was first introduced to programming by a good friend of mine. He introduced me to the books `The Little Schemer` and `Programming for the puzzled` where I got hands on experience with how to solve puzzles using code and the basics of recursion.
                         </Typography>
                     </Box>
-                    <Typography variant ="h2" className={`${classes.timelineYear} ${classes.timelineItem}`}>May 2019</Typography>
+                    <Typography variant ="h2" className={`${classes.timelineYear} ${classes.timelineItem}`}>MAY 2019</Typography>
                     <Box component="div" className={classes.timelineItem}>
                         <Typography variant="h5" className={classes.subHeading}>
                             Data Science with Python
@@ -145,19 +145,19 @@ const About = () => {
                             Achieved a distinction grade in the introduction to Python course. This course was design to teach the basics of Python and the applications of Python to create simple loops and conditionals. Although this was extremely basic it has created a strong foundation for which I continued to work on to solve more advanced problems.
                         </Typography>
                     </Box>
-                    <Typography variant ="h2" className={`${classes.timelineYear} ${classes.timelineItem}`}>Jul 2019</Typography>
+                    <Typography variant ="h2" className={`${classes.timelineYear} ${classes.timelineItem}`}>JUL 2019</Typography>
                     <Box component="div" className={classes.timelineItem}>
                         <Typography variant="h5" className={classes.subHeading}>
                             Uplevel project
                         </Typography>
                         <Typography variant="body1" style={{color: 'tomato'}}>
-                            G20 Summit Analysis (Text analysis)
+                            G20 Summit (Text Analysis)
                         </Typography>
                         <Typography variant="subtitle1" style={{color: 'tan'}}>
-                            This is where I found great sense of purpose and where I found a home.
+                            In this group project I managed to apply all the knowledge from the course into this real world project. Every few years all the world leaders gather for a meeting to discuss world issues and we wanted to understand the main topics that were discussed and how news articles throughout the world was reporting this. To do this we used NewsRiver to collect and collate thousands of news articles, filtered the responses and performed text analysis and sentiment analysis and the findings were quite interesting.
                         </Typography>
                     </Box>
-                    <Typography variant ="h2" className={`${classes.timelineYear} ${classes.timelineItem}`}>Aug 2019</Typography>
+                    <Typography variant ="h2" className={`${classes.timelineYear} ${classes.timelineItem}`}>AUG 2019</Typography>
                     <Box component="div" className={classes.timelineItem}>
                         <Typography variant="h5" className={classes.subHeading}>
                             Data Science with Python
@@ -170,28 +170,28 @@ const About = () => {
                         </Typography>
                     </Box>
                     
-                    <Typography variant ="h2" className={`${classes.timelineYear} ${classes.timelineItem}`}>2017</Typography>
+                    <Typography variant ="h2" className={`${classes.timelineYear} ${classes.timelineItem}`}>DEC 2019</Typography>
                     <Box component="div" className={classes.timelineItem}>
-                        <Typography variant="h5" align="center" className={classes.subHeading}>
-                            Mern Stack
+                        <Typography variant="h5" className={classes.subHeading}>
+                            Data Science with Python
                         </Typography>
-                        <Typography variant="body1" align="center" style={{color: 'tomato'}}>
-                            Company name where worked
+                        <Typography variant="body1" style={{color: 'tomato'}}>
+                            Algo Trading (Financial Analysis) 
                         </Typography>
-                        <Typography variant="subtitle1" align="center" style={{color: 'tan'}}>
-                            This is where I found great sense of purpose and where I found a home.
+                        <Typography variant="subtitle1" style={{color: 'tan'}}>
+                            The goal of this project was to analyse different shares and stocks in the stock market by collecting historical company finance data. We collected about 20 years worth of historical data on my chosen company (DBS Bank Singapore) using the Oanda API. We plotted the data found with Matplotlib and was able to apply basic technical analysis on the trends found.  We also collected buy and sell signals and performed a test of investing $10000 into this share. This not only gave us a prediction on whether in the long term this would have returned money or would have lost us money with no risk at all.
                         </Typography>
                     </Box>
-                    <Typography variant ="h2" className={`${classes.timelineYear} ${classes.timelineItem}`}>2018-2020</Typography>
+                    <Typography variant ="h2" className={`${classes.timelineYear} ${classes.timelineItem}`}>2020 -></Typography>
                     <Box component="div" className={classes.timelineItem}>
-                        <Typography variant="h5" align="center" className={classes.subHeading}>
-                            Current knowledge
+                        <Typography variant="h5" className={classes.subHeading}>
+                            Frontend Web Development
                         </Typography>
-                        <Typography variant="body1" align="center" style={{color: 'tomato'}}>
-                            Company name where worked
+                        <Typography variant="body1" style={{color: 'tomato'}}>
+                            FoodLoose Website
                         </Typography>
-                        <Typography variant="subtitle1" align="center" style={{color: 'tan'}}>
-                            This is where I found great sense of purpose and where I found a home.
+                        <Typography variant="subtitle1" style={{color: 'tan'}}>
+                            After learning data science and Python I soon realised that I needed a way to display and showcase the findings so I brushed up my front end skills to develop websites with no backend capabilities yet. This way I was able to present my findings and interesting points through a blog.
                         </Typography>
                     </Box>
                 </Box>
