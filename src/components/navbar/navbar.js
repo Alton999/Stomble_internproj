@@ -3,7 +3,7 @@ import { AppBar, Toolbar, Typography, ListItem, IconButton, ListItemText,  Divid
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
 import MobileRightMenuSlider from "@material-ui/core/Drawer";
-import { ArrowBack, AssignmentInd, Home, Apps, ContactMail} from '@material-ui/icons';
+import { ArrowBack, AssignmentInd, Home, Apps, ContactMail, Fingerprint} from '@material-ui/icons';
 import Footer from '../footer'
 
 // import classes from '*.module.css';
@@ -11,7 +11,7 @@ import Footer from '../footer'
 const useStyles = makeStyles((theme)=> ({
     hiddenMenuContainer: {
         width: 250,
-        background: '#27ae60',
+        background: '#686de0',
         height: "100%",
         paddingTop: '5rem'
     },
@@ -49,6 +49,11 @@ const menuItems = [
         listIcon: <ContactMail/>,
         listText: "Contact us",
         listPath: '/contact'
+    },
+    {
+        listIcon: <Fingerprint/>,
+        listText: 'Intranet',
+        listPath: '/intranet'
     }
 ]
 //Main Content for Navbar
@@ -86,7 +91,7 @@ const Navbar = () => {
         {/* This component includes the navbar with styling and triggers the slider menu to come out */}
         {/* Since there wasn't much styling under the navbar having the styles in here temporarily is fine */}
         <Box component="nav">
-            <AppBar position="static" style={{background: "#2c3e50"}}>
+            <AppBar position="static" style={{background: "#30336b"}}>
                 <Toolbar>
                     <IconButton onClick={toggleSlider('right', true)}>
                         <ArrowBack style={{color: '#f1c40f'}}/>

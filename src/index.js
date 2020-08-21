@@ -1,16 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 //This was added to allow the buttons to route to different pages
-import {BrowserRouter as Router} from 'react-router-dom'
+import {BrowserRouter as Router} from 'react-router-dom';
+import {createStore, combineReducers} from 'redux';
+import {Provider, connect} from 'react-redux';
 // import './index.css';
 import App from "./App";
+import attendenceHereReducer from './components/intranet/store/redux/reducer'
 import * as serviceWorker from './serviceWorker';
+
+const rootReducer = combineReducers({
+  here: attendenceHereReducer
+});
+const store = createStore(rootReducer);
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
-      <App />
-    </Router>
+    <Provider store={store}>
+      <Router>
+        <App />
+      </Router>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

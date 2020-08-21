@@ -24,11 +24,10 @@ const useStyles = makeStyles({
 const Footer = () => {
     const classes = useStyles();
     return (
-        <BottomNavigation width='auto' style={{background: '#222'}}>
+        <BottomNavigation width='auto' style={{background: '#130f40'}}>
             <BottomNavigationAction className={classes.root} style={{padding: 0}} icon={<FacebookIcon/>}/>
             <BottomNavigationAction className={classes.root} style={{padding: 0}} icon={<TwitterIcon/>}/>
-            <BottomNavigationAction className={classes.root}  style={{padding: 0}} icon={<InstagramIcon/>}/>
-                 
+            <BottomNavigationAction className={classes.root}  style={{padding: 0}} icon={<InstagramIcon/>}/>     
         </BottomNavigation>
     )
 }
