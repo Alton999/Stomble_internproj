@@ -11,6 +11,7 @@ import AddCircleIcon from '@material-ui/icons/AddCircle';
 import person1 from './avatar/robbie.png'
 import { connect } from 'react-redux';
 import * as actionTypes from './store/redux/types'
+import ListBuilder from './listBuilder';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -89,39 +90,42 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: '1rem'
     }
 }))
-// const InputField = withStyles({
-//     root: {
-//         '& label.Mui-focused': {
-//             color: 'tomato',
-//         },
-//         '& label': {
-//             color: 'tan'
-//         },
-//         '& .MuiOutlinedInput-root': {
-//             '& fieldset': {
-//                 borderColor: 'tan'
-//             },
-//             '&:hover fieldset': {
-//                 borderColor: 'tan'
-//             },
-//             '& .Mui-focused fieldset': {
-//                 borderColor: 'tan'
-//             }
-//         },
-        
+const InputField = withStyles({
+    root: {
+        '& label.Mui-focused': {
+            color: 'tomato',
+        },
+        '& label': {
+            color: 'tan'
+        },
+        '& .MuiOutlinedInput-root': {
+            '& fieldset': {
+                borderColor: 'tan'
+            },
+            '&:hover fieldset': {
+                borderColor: 'tan'
+            },
+            '& .Mui-focused fieldset': {
+                borderColor: 'tan'
+            }
+        },
+    },
+})(TextField);
 
-//     },
-// })(TextField);
+
+
 
 const Intranet = (props) => {
     const classes = useStyles();
+    // const handleNameInput = (initialState) => {
+    // } 
     return (
         <>
             <Navbar/>
                 <Box component='header' className={classes.headerContainer}>
-                    <Typography className={classes.header}>
+                    {/* <Typography className={classes.header}>
                         <Typed strings={['Welcome to the Team Manager!', 'Find out everything to do today!']} typeSpeed={40} backSpeed={60} loop/>
-                    </Typography>
+                    </Typography> */}
                 </Box>
             <Box component='div' className={classes.mainContainer}>
                 <Grid container justify='center'>
@@ -130,7 +134,7 @@ const Intranet = (props) => {
                             <CardHeader title='Team 1 Attendence' subheader='21st Aug 2020' action={<IconButton aria-label='settings'><MoreVertIcon/></IconButton>}/>
                             <Card className={classes.employeeCard}>
                                 <Avatar alt='dev1' src={person1} className={classes.cardAvatar}/>
-                                <Typography variant='h5' className={classes.personName}>Alton Ong</Typography>
+    <Typography variant='h5' className={classes.personName}>Alton Ong</Typography>
                                 <Box className={classes.attendenceButtons}>
                                     <Button className={classes.individualButton}>
                                         <DoneAllOutlinedIcon fontSize='large'/>
@@ -139,15 +143,27 @@ const Intranet = (props) => {
                                         <ClearIcon  fontSize='large'/>
                                     </Button>
                                 </Box>               
-                            </Card>                          
+                            </Card>                         
+                            <Card className={classes.employeeCard}>
+                                <Avatar alt='dev1' src={person1} className={classes.cardAvatar}/>
+    <Typography variant='h5' className={classes.personName}>Alton Ong</Typography>
+                                <Box className={classes.attendenceButtons}>
+                                    <Button className={classes.individualButton}>
+                                        <DoneAllOutlinedIcon fontSize='large'/>
+                                    </Button>
+                                    <Button className={classes.individualButton}>
+                                        <ClearIcon  fontSize='large'/>
+                                    </Button>
+                                </Box>               
+                            </Card>                         
                             <Box className={classes.counter}>
                                 <Typography variant='h6'>Total working today: 10</Typography>
                                 <Typography>Total absent today: 10</Typography>
                                 <Typography>Total missing: 10</Typography> 
-                                <Button className={classes.addTeamMemberButton}>Add Team Member <AddCircleIcon className={classes.addTeamMemberButtonIcon}/></Button>                
-                            </Box>    
-                            
-                            
+                                <Button className={classes.addTeamMemberButton}>Add Team Member <AddCircleIcon className={classes.addTeamMemberButtonIcon}/></Button>   
+                                <InputField label='Name' fullWidth={true} variant='outlined' margin='dense' size='medium' inputProps={{style: {color: 'white'}}}/>             
+                            </Box>   
+                            <ListBuilder/>    
                         </Card>
                     </Grid>
                     

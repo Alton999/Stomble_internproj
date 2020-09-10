@@ -3,7 +3,8 @@ import * as Types from './types';
 
 // Initial state
 const initState = {
-    count: 0 
+    count: 0,
+    
 }
 
 // Reducer
@@ -17,7 +18,7 @@ const reducer = (state = initState, { type, payload }) => {
             return state
         }
     }
-    
+
 }
 
 export default reducer;
